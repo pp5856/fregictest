@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    
+  <style>
+    
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src ="test.js"></script>
+</head>
+<body>
+
+    <h1><a href="index.html">WEB</a></h1>
+  <!-- <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';">
+    
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';">
+
+    <input type="button" value="hi" onclick="alert('hi')">
+    <input type="text" onchange="alert('changed')">
+    <input type="text" onkeydown="alert('key - down!')"> -->
+
+    <input id="night" type="button" value="night" onclick="nightday_handler(this)">
+
+    
+    <input id="night" type="button" value="night" onclick="nightday_handler(this)">
+
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+    <li><a href="test_js.html">Main</a></li>
+  </ol>
+  <h2>JavaScript</h2>
+
+  
+  <p>
+    JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+  </p> 
+    <!-- <input type="button" value="hi" onclick="alert('my name is' + name)"> -->
+  <br>
+
+
+  <h1>Loop & Array</h1>
+  <script>
+    var coworkers = ['egoing','leezche','duru','taeho','21HO'];
+  </script>
+  <h2>Co workers</h2>
+  <script>
+    var i = 0;
+    while (i < coworkers.length) {
+      document.write('<li><a href="http://a.com/'+coworkers[i]+' ">'+coworkers[i]+'</a></li>');
+      i += 1
+    }
+  </script>
+
+
+
+<h1>Fucntion</h1>
+
+<h2>Basic</h2>
+<ul>
+<script>
+  function Bae(){
+    document.write('<li>웅섭이</li>')
+      document.write('<li>동윤이</li>')
+      document.write('<li>헤이gml승</li>')
+  }
+
+  document.write('<li>1-1</li>')
+  Bae()
+  Bae()
+  Bae()
+  Bae()
+  document.write('<li>1-2</li>')
+  Bae()
+</script>
+</ul>
+
+<h2>Parameter & Argument</h2>
+<script>
+  function onePlusone(){
+  document.write(1+1+'<br>');
+}
+onePlusone();
+
+  function sum(x,y){
+    document.write(x+y+'<br>');
+  }
+  sum(4,7);
+  sum(8,9);
+</script>
+
+<h2 style="color: royalblue;">Return</h2>    
+<script>
+  function sum2(left, right){
+    return left + right
+  }
+  document.write('<div style = "color : red">'+sum2(2,3)+'</div>')
+  document.write('<div style = "color : aqua; font-size : 24px;">'+sum2(2,3)+'</div>')
+</script>
+
+
+<h1>Object</h1>
+
+<h2>Create</h2>
+<script>
+  var coworkers2 = {
+    "programmer":"egoing",
+    "designer" :"leezche"
+  };
+  document.write("programmer : " +coworkers2.programmer+"<br>");
+  document.write("programmer : " +coworkers2.designer+"<br>");
+  coworkers2.bookkeeper = " duru";
+  document.write("bookkeeper : "+coworkers2.bookkeeper+"<br>");
+  coworkers2["data scientist"] = 'taeho'
+  document.write("data scientist : "+coworkers2["data scientist"]+"<br>");
+  </script>
+  <h2>Iterate</h2>
+  <script>
+    for(var key in coworkers2){
+      document.write(key+' : '+coworkers2[key]+"<br>")
+    }
+    document.write("<br>")
+    for(var key in coworkers2){
+      document.write(key+' : '+coworkers2[key]+"<br>")
+    }
+  </script>
+
+  <h2>Property & Method</h2>
+  <script>
+    coworkers2.showall = function(){
+      for(var key in this){
+        if(key != "showall"){
+      document.write(key+' : '+this[key]+"<br>")
+    }
+  }
+    for(var key in this){
+      if(key != "showall"){
+      document.write(key+' : '+this[key]+"<br>")
+    }
+  }
+    }
+    coworkers2.showall()
+  </script>
+</body>
+</html>
